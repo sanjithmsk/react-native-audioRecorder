@@ -8,8 +8,6 @@ For React Native <= 0.39, use v3.0.0 or lower.
 
 v4.0 introduced a breaking change to the API to introduce distinct pause and resume methods.
 
-v3.x removed playback support in favor of using more mature libraries like [react-native-sound](https://github.com/zmxv/react-native-sound). If you need to play
-from the network, please submit a PR to that project or try `react-native-video`.
 
 ### Installation
 
@@ -121,7 +119,6 @@ Encodings supported on Android: `aac, aac_eld, amr_nb, amr_wb, he_aac, vorbis`
 
 Use the `IncludeBase64` boolean to include the `base64` encoded recording on the `AudioRecorder.onFinished` event object. Please use it with care: passing large amounts of data over the bridge, from native to Javascript, can use lots of memory and cause slow performance.
 
-If you want to upload the audio, it might be best to do it on the native thread with a package like [React Native Fetch Blob](https://github.com/joltup/react-native-fetch-blob).
 
 #### iOS-only fields
 
@@ -148,10 +145,6 @@ OutputFormat: string, `mpeg_4, aac_adts, amr_nb, amr_wb, three_gpp, webm`
 
 AudioSource: int (constants) (Possible values: AudioSource.DEFAULT, AudioSource.MIC, AudioSource.VOICE_UPLINK, AudioSource.VOICE_DOWNLINK, AudioSource.VOICE_CALL, AudioSource.CAMCORDER, AudioSource.VOICE_RECOGNITION, AudioSource.VOICE_COMMUNICATION, AudioSource.REMOTE_SUBMIX, AudioSource.UNPROCESSED)
 
-See [the example](https://github.com/jsierles/react-native-audio/blob/master/AudioExample/index.ios.js) for more details. For playing audio check out [React Native Sound](https://github.com/zmxv/react-native-sound)
 
 MP3 recording is *not supported* since the underlying platforms do not support it.
 
-Thanks to Brent Vatne, Johannes Lumpe, Kureev Alexey, Matthew Hartman and Rakan Nimer for their assistance.
-
-Progress tracking code borrowed from https://github.com/brentvatne/react-native-video.
