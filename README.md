@@ -14,8 +14,8 @@ v4.0 introduced a breaking change to the API to introduce distinct pause and res
 Install the npm package and link it to your project:
 
 ```
-npm install react-native-audio --save
-react-native link react-native-audio
+npm install sanjithmsk/react-native-audioRecorder --save
+react-native link react-native-audio // note required if your react native version above 62
 ```
 
 On *iOS* you need to add a usage description to `Info.plist`:
